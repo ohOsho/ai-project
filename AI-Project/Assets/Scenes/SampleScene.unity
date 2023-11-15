@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 313618455}
   - component: {fileID: 313618454}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
