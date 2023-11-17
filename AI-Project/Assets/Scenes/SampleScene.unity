@@ -707,6 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAgent: {fileID: 510007779}
+  rb: {fileID: 0}
 --- !u!4 &510007781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84ec6bbf9dfe61a49b9ae5b4cdfe4095, type: 3}
