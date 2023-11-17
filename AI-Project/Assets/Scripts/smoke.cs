@@ -9,6 +9,7 @@ public class smoke : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         chimney.SetActive(true);
+        Destroy(gameObject);
 
     }
 }
