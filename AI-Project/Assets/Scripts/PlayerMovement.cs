@@ -6,19 +6,22 @@ using UnityEngine.AI;
 public class PlayerMovement: MonoBehaviour
 {
     public NavMeshAgent mAgent;
-    public Rigidbody rb;
+    private Animator anim;
+    private Rigidbody rb;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
+
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mouse = Input.mousePosition;
-            Vector3 stop = new Vector3(rb.velocity.x, 0, 0);
 
             Ray castPoint = Camera.main.ScreenPointToRay(mouse);
 
@@ -27,7 +30,12 @@ public class PlayerMovement: MonoBehaviour
             {
                 mAgent.SetDestination(hit.point);
             }
+
+
         }
+
+
+        anim.SetBool("IsMoving", mAgent.velocity.magnitude > 0.01f);
 
     }
 }
